@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"    
+      xmlns:f="http://java.sun.com/jsf/core">
+    <h:head>
+        <link href="monstyle.css" rel="stylesheet" type="text/css" />
+        <title>eMarket - Créer un produit</title>
+    </h:head>
+    <h:body>
+        <f:view>
+            <h1>Créer un produit </h1>
+
+
+
+            <h:form>
+                
+                <h:outputLabel id="nameLabel" for="nameInput" value="Nom: "/>
+                <h:inputText id="nameInput" value="#{catalogManager.nameInput}"/>
+                <br />
+                <h:outputLabel id="idLabel" for="idInput" value="Identifiant: "/>
+                <h:inputText id="idInput" value="#{catalogManager.idInput}"  />
+                <br />
+                <h:outputLabel id="priceLabel" for="priceInput" value="Prix: "/>
+                <h:inputText id="priceInput" value="#{catalogManager.priceInput}" />
+                <br /><br />
+
+                <h:commandButton value="Valider" action="#{catalogManager.createProduct()}" />
+                <br /><br /><br />
+
+                <h:commandLink action="productCreateToHome">
+                    <h:outputText value="Back Home" />
+                </h:commandLink>
+            </h:form>    
+        </f:view>
+    </h:body>
+</html>
+
